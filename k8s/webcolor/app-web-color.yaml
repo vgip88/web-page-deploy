@@ -9,8 +9,10 @@ spec:
   project: default
   source: 
     repoURL: https://github.com/vgip88/web-page-deploy.git
-    path: k8s
+    path: k8s/webcolor
     targetRevision: HEAD
+    directory:
+      recursive: true
   destination: 
     namespace: webcolor
     server: https://kubernetes.default.svc
