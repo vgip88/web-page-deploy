@@ -12,7 +12,7 @@ spec:
     path: k8s
     targetRevision: HEAD
     directory:
-      recursive: true
+      recurse: true
   destination: 
     namespace: webcolor
     server: https://kubernetes.default.svc
