@@ -14,5 +14,6 @@ spec:
   destination: 
     namespace: webcolor
     server: https://kubernetes.default.svc
-
-   
+  info:
+    - name: Projeto
+      value: ArgoCD Webcolor
