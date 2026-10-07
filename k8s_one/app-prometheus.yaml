@@ -13,9 +13,9 @@ spec:
     targetRevision: 29.35.0
     helm:
       releaseName: prometheus
-      parameters:
-        - name: "server.service.type"
-          value: "LoadBalancer"
+      # parameters:
+      #   - name: "server.service.type"
+      #     value: "LoadBalancer"
   destination: 
     namespace: monitoramento
     server: https://kubernetes.default.svc
