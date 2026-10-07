@@ -13,8 +13,9 @@ spec:
     targetRevision: 29.35.0
     helm:
       releaseName: prometheus
-      # valueFiles:
-      #   - values.yaml
+      parameters:
+        - name: "server.service.type"
+          value: "LoadBalancer"
   destination: 
     namespace: monitoramento
     server: https://kubernetes.default.svc
