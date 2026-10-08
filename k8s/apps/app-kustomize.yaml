@@ -1,11 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: prometheus
+  name: conversao
   namespace: argocd
   labels:
     curso: gitops
 spec:
   project: default
-  sources: 
-   - repoURL: https://prometheus-community.github.io/helm-char
+  source: 
+    repoURL: https://github.com/vgip88/web-page-deploy.git
+    targetRevision: HEAD
+    path: deploy_kustomize
+  destination: 
+    namespace: conversao
+    server: https://kubernetes.default.svc
