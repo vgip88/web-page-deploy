@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prometheus
+  namespace: argocd
+  labels:
+    curso: gitops
+spec:
+  project: default
+  sources: 
+   - repoURL: https://prometheus-community.github.io/helm-charts
+     chart: prometheus
+     targetRevision: 29.35.0
+     helm:
+      releaseName: prometheus
+      valueFiles:
+        - $values/k8s_one/prometheus/values.yaml
+   - repoURL: https://github.com/vgip88/web-page-deploy.git
+     targetRevision: HEAD
+     ref: values
+      # parameters:
+      #   - name: "server.service.type"
+      #     value: "LoadBalancer"
+  destination: 
+    namespace: monitoramento
+    server: https://kubernetes.default.svc
+    
