@@ -14,7 +14,7 @@ spec:
      helm:
       releaseName: prometheus
       valueFiles:
-        - $values/k8s_one/prometheus/values.yaml
+        - $values/k8s_fora_recursivo/prometheus/values.yaml
    - repoURL: https://github.com/vgip88/web-page-deploy.git
      targetRevision: HEAD
      ref: values
