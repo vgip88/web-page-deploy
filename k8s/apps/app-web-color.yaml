@@ -11,8 +11,9 @@ spec:
     repoURL: https://github.com/vgip88/web-page-deploy.git
     path: k8s
     targetRevision: HEAD
-    # directory:
-    #   recurse: true
+    directory:
+      recurse: true
+      include: '{deploy_nginx/*,deploy_webcolor/*}'
   destination: 
     namespace: webcolor
     server: https://kubernetes.default.svc
