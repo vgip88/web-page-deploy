@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/vgip88/simulador-do-caos.git
-    path: k8s/caos
+    path: k8s
     targetRevision: HEAD
     directory:
       recurse: true
