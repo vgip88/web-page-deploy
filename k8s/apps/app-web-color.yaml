@@ -19,6 +19,7 @@ spec:
     server: https://kubernetes.default.svc
   syncPolicy:
     automated: {}
+    selfHeal: true
   info:
     - name: Projeto
       value: ArgoCD Webcolor
