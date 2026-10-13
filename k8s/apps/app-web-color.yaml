@@ -20,6 +20,12 @@ spec:
   syncPolicy:
     automated:
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - Validate=true
+      - PrunePropagationPolicy=foreground
+      - PruneLast=false
+      - RespectIgnoreDifferences=true
   info:
     - name: Projeto
       value: ArgoCD Webcolor
