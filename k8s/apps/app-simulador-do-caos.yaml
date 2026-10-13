@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/vgip88/simulador-do-caos.git
+    repoURL: https://github.com/vgip88/web-page-deploy.git
     path: k8s
     targetRevision: HEAD
     directory:
