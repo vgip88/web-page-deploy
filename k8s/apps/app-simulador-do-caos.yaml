@@ -25,11 +25,9 @@ spec:
       name: web
       jsonPointers:
         - /spec/replicas
-    group: autoscaling
-    kind: HorizontalPodAutoscaler
-    name: web
-    jsonPointers:
-      - /status/currentReplicas
-      - /status/desiredReplicas
-      
-    
+    - group: autoscaling
+      kind: HorizontalPodAutoscaler
+      name: web
+      jsonPointers:
+        - /status/currentReplicas
+        - /status/desiredReplicas
