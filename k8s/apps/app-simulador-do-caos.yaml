@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: caos
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/vgip88/simulador-do-caos.git
+    path: k8s/caos
+    targetRevision: HEAD
+    directory:
+      recurse: true
+      include: '{deploy_simulador_do_caos/*}'
+  destination:
+    namespace: caos
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated: 
+      prune: true
+      selfHeal: true
